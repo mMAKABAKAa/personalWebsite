@@ -7,9 +7,8 @@
 ⚡️ Fully Responsive\
 ⚡️ Valid HTML5 & CSS3\
 ⚡️ Typing animation using `index.js`\
-⚡️ Include a photo gallery
-⚡️ Provide a web-based contact form
-⚡️ No 
+⚡️ Include a photo gallery\
+⚡️ Provide a web-based contact form\
 ⚡️ Easy to modify
 
 
@@ -20,7 +19,7 @@
 ✔️ Education\
 ✔️ Online Certification\
 ✔️ Interests\
-✔️ Contact Me\
+✔️ Contact Me
 
 
 

@@ -9,7 +9,6 @@
 ⚡️ Typing animation using `index.js`\
 ⚡️ Include a photo gallery\
 ⚡️ Provide a web-based contact form\
-⚡️ No \
 ⚡️ Easy to modify
 
 

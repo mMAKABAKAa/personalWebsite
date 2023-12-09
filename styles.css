@@ -295,6 +295,10 @@ nav a:hover {
     cursor: pointer;
 }
 
+.interest-nav button:hover{
+    background-color: #CCD5AE;
+}
+
 /* Layout for the navigation in the carousel */
 .interest-nav {
     display: flex;
@@ -304,7 +308,7 @@ nav a:hover {
     margin: 2rem 0;
 }
 
-/* Styles for the content container in the carousel */
+/* Styles for the content container */
 .content-container {
     text-align: center; /* Centers the text */
     position: relative;
@@ -315,6 +319,9 @@ nav a:hover {
     display: none;
     margin: 1rem auto; /* Centers the image */
     width: 25%;
+}
+#hongkong, #uk, #guilin{
+    width: 40%; /* Width for specific images */
 }
 
 /* Initially shows the first image in the content container */
@@ -428,13 +435,13 @@ nav a:hover {
 }
 
 /* Styles for links in the contact section */
-.contact a {
-    color: darkolivegreen;
+.contact-card a {
+    color: black;
 }
 
 /* Hover effect for links in the contact section */
-.contact a:hover {
-    color: greenyellow;
+.contact-card a:hover {
+    color: darkolivegreen;
 }
 
 /* Resume Page Styles */

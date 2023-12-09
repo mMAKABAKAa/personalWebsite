@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mu's World - Interests</title>
+</head>
+<body>
+    <main>
+    <div id="header-placeholder"></div>
+    <section class="interest">
+        <h2>My Interests</h2>
+        <div class="interest-nav">
+            <button onclick="showContent('gardening')">Novice Gardener</button>
+            <button onclick="showContent('travel')">Travel Lover</button>
+            <button onclick="showContent('piano')">Piano Player</button>
+        </div>
+        <div id="gardening" class="content-container">
+            <button class="prev">&laquo;</button>
+    <button class="next">&raquo;</button>
+            <p>In my yard, I've planted a variety of plants. Watching them grow every day brings me immense joy.</p>
+            <img src="./images/radish.JPG" alt="Radish" >
+            <img src="./images/cuumber.JPG" alt="Cucumber" >
+            <img src="./images/rose.JPG" alt="Rose" >
+            <img src="./images/tulips.JPG" alt="Tulips" >
+        </div>
+        <div id="travel" class="content-container">
+            <button class="prev">&laquo;</button>
+    <button class="next">&raquo;</button>
+            <p>I have a profound passion for traveling. I've visited many places and hope to explore even more destinations in the future.</p>
+            <img src="./images/mohe.JPG" alt="Mohe" >
+            <img id="guilin" src="./images/guilin.JPG" alt="Guilin" >
+            <img id="hongkong" src="./images/hongkong.JPG" alt="Hong Kong" >
+            <img src="./images/australia.JPG" alt="Australia" >
+            <img id="uk" src="./images/uk.JPG" alt="UK" >
+        </div>
+        <div id="piano" class="content-container">
+            <p>Playing the piano is my best friend when it comes to expressing my emotions.</p>
+            <div class="video-responsive">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6X5Gcat8pMs?si=AGovc7NcDfBJSMxL" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+    </section> </main>   
+    <footer>
+        <p>© 2023 Pinwen Mu</p>
+    </footer>
+    <script src="./script/header.js"></script>
+    <script src="./script/interest.js"></script>  
+</body>
+</html>

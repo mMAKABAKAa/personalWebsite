@@ -1,0 +1,639 @@
+/* Basic Reset */
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Styles */
+html, body {
+    font-family: Arial, sans-serif;
+    color: #191919;
+    background-color:#FEFAE0;
+    line-height: 1.6;
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex:1;
+}
+
+footer {
+    text-align: center;
+    height: 3rem;
+    padding: 1rem;
+}
+/* Typography */
+p {
+    color: rgb(74, 74, 74);
+}
+
+h2 {
+    text-align: center;
+    margin-top: 1rem;
+    width: 100%;
+}
+h3{
+    padding: 1rem 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 2px solid #CCD5AE;
+    background-color: #E9EDC9;
+}
+
+header h1 a{
+    color: rgb(106, 106, 106);
+    font-size: 1.5rem;
+    font-family: 'Nothing You Could Do', cursive;
+    text-decoration: none;
+}
+
+
+header a:hover {
+    color: #0a0a0af0;
+    font-style: oblique;
+}
+
+/* 默认隐藏更多选项 */
+.more {
+    display: none;
+}
+
+.more-menu {
+    display: none;
+    position: absolute;
+    background-color: #E9EDC9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+
+nav li {
+    margin-left: 3rem;
+}
+
+nav a {
+    color: rgb(131, 131, 131);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #0a0a0af0;
+    font-style: oblique;
+}
+
+/* Index Page Style*/
+.index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    text-align: center;
+    
+}
+
+.index h2 {
+    font-size: 2.5rem;
+}
+
+@keyframes wave-animation {
+    0%, 100% { transform: rotate(0deg); }
+    20%, 60% { transform: rotate(-20deg); }
+    40%, 80% { transform: rotate(10deg); }
+}
+
+.wave {
+    display: inline-block;
+    animation-name: wave-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;  /* 调整这个值来改变旋转的原点 */
+}
+#typewriter {
+    border-right: 2px solid;
+    white-space: nowrap; /* 防止换行 */
+    overflow: hidden; /* 隐藏溢出的文字 */
+    /* 您可以添加其他样式，比如字体大小、颜色等 */
+}
+
+.index p {
+    font-size: 1.5rem;
+}
+
+.index img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin: 3rem;
+    object-fit: cover;
+}
+
+
+/* About Page Styles */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.about .content-wrapper {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .text-content {
+    width: 50%;
+    text-align: left;
+    margin: 5% 2.5%;
+}
+
+.about img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30%;
+    margin: 5% 2.5%;
+}
+
+/* Project Page Styles */
+.project-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding-top: 1.5rem;
+}
+.project-img {
+    width: 400px; /* 或其他尺寸 */
+    border: 1px solid #ddd; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease;
+}
+
+.project-img:hover {
+    transform: scale(1.05); /* 放大效果 */
+    
+}
+
+.project-info {
+    display: none;
+    position: absolute;
+    /* 其他样式设置 */
+}
+
+.project-info.active {
+    display: block;
+}
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.modal-content {
+    background-color: #fafcdb;
+    margin: 10% auto;
+    padding: 50px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 50%;
+    ;
+    /* 其他样式 */
+}
+
+#project_name{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Interest Page Styles (Carousel)*/
+.interest-nav button {
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border: 1px solid #CCD5AE;
+    background-color: #E9EDC9;
+    cursor: pointer;
+}
+
+.interest-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.content-container {
+    text-align: center; /* 文本居中 */
+    position: relative;
+}
+#hongkong, #uk, #guilin{
+    width: 40%;
+}
+.content-container img {
+    
+    display: none;
+    margin: 1rem auto; /* 图片居中 */
+    width: 25%;
+}
+
+.content-container img:first-child {
+    display: block;
+}
+
+/* 调整左右箭头按钮的位置 */
+/* 针对箭头按钮的基本样式 */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+    background-color: transparent; /* 无背景色 */
+    border: none; /* 无边框 */
+    font-size: 24px; /* 箭头大小 */
+    color: #333; /* 箭头颜色 */
+}
+
+.prev {
+    left: 25%;
+}
+
+.next {
+    right: 25%;
+}
+
+.content-container iframe {
+    margin: 0.5rem;
+    border: none;
+}
+
+
+
+/* Initially show the first tab content */
+
+/* Contact Page Styles */
+.contact {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contact #name, 
+.contact #email, 
+.contact #subject,
+.contact #message {
+    width: 80%;
+    height:2rem;
+    margin:  0 0 1rem 0;
+    background-color: #FEFAE0;
+    border: 2px solid #CCD5AE;
+}
+
+.contact #message {
+    height: 10rem;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.contact #submit{
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border: 1px solid #CCD5AE;
+    background-color: #E9EDC9;
+    cursor: pointer;
+}
+
+.contact-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.contact-card {
+    background-color: #E9EDC9;;
+    border: 1px solid #CCD5AE;
+    border-radius: 4px;
+    padding: 1rem;
+    width: 25%;
+    text-align: center;
+}
+.contact p{
+    text-align: center;
+}
+.contact a{
+    color:darkolivegreen;
+}
+.contact a:hover{
+    color: greenyellow;
+}
+/* Resume Page Styles */
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+/* .resume-container button{
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border: 1px solid #CCD5AE;
+    background-color: #E9EDC9;
+    cursor: pointer;
+} */
+
+.button-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #CCD5AE;
+    background-color: #E9EDC9;
+    color: rgb(74, 74, 74);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.button-link:hover {
+    background-color: #CCD5AE;
+}
+
+
+#resume{
+    width: 800px;
+    padding: 2rem 0;
+}
+
+/* Education Page Styles */
+.education-card {    
+    width: 400px; 
+    border: 1px solid #ddd; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.education-card img {
+    width: 100%; 
+    height: 200px; 
+    object-fit:fill;
+}
+
+.education-card-info {
+    padding: 15px;
+}
+
+.certification-card-container, .education-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding-top: 1.5rem;
+}
+.certification-card {
+    position: relative;
+    width: 400px;
+    height: 180px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.certification-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; 
+}
+
+.certification-card-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.808); 
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.certification-card:hover .certification-card-info {
+    opacity: 1; 
+}
+
+.certification-card-info h3, .certification-card-info p {
+    color: black; 
+    margin: 10px;
+}
+
+.link-image {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.link-image:hover {
+    filter: brightness(0.1);
+    transform: scale(2); 
+}
+
+
+/* Responsive Styles */
+/* 响应式样式 */
+
+/* 平板电脑和较小屏幕 */
+@media only screen and (max-width: 992px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: flex-start;
+        padding-top: 0.5rem;
+    }
+
+    nav li:not(:first-of-type) {
+        margin-left: 1rem;
+    }
+
+    nav li#home {
+        margin-left: 0;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 0.25rem 0;
+    }
+
+/* 手机和更小屏幕 */
+@media only screen and (max-width: 576px) {
+    header h1,
+    nav a,
+    .index img,
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    /* 隐藏原有导航项 */
+    #nav_resume, #education, #interests, #contact {
+        display: none;
+    }
+    /* 在小屏幕上显示更多选项 */
+    .more {
+        display: block;
+    }
+
+    .more-menu{
+        width: 10rem;
+    }
+    .more-menu li {
+        display: block;
+        text-align: left;
+    }
+
+    .prev, .next {
+        font-size: 36px; /* 调整箭头大小 */
+        top: 50%;   
+    }
+    .prev{
+        left: 2%; /* 针对 .prev */
+    }
+    .next{
+        right:2%; /* 针对 .next */
+    }
+
+    #landscape{
+        width: 80%;
+    }
+
+    .interest-nav button {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .video-responsive {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        margin: 1rem;
+    }
+    
+    .video-responsive iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }    
+    .content-container iframe {
+        margin: 0;
+    }
+    .content-container img,
+    .content-container video {
+        width: 90%; /* 图片和视频的宽度 */
+    }
+
+    #hongkong, #uk, #guilin{
+        width: 90%;
+    }
+
+    .modal-content {
+        width: 90%; /* 模态框的宽度 */
+        padding: 20px;
+    }
+
+    .about .content-wrapper,
+    .contact #name, 
+    .contact #email, 
+    .contact #subject,
+    .contact #message {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .about .text-content,
+    .about img {
+        width: 80%;
+    }
+    .contact-cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-card {
+        width: 100%;
+        margin: 1rem;
+    }
+
+    #resume {
+        width: 90%;
+        padding: 2rem 0;
+    }
+}
+}

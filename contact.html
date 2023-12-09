@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mu's World - Contact Me</title>
+</head>
+<body>
+    <main>
+    <div id="header-placeholder"></div>
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form" action="https://formspree.io/f/meqbbyyj" method="POST">
+            <!-- Name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <div class="error" id="name-error"></div>
+        
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <div class="error" id="email-error"></div>
+        
+            <!-- Subject -->
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            <div class="error" id="subject-error"></div>
+        
+            <!-- Message -->
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <div class="error" id="message-error"></div>
+        
+            <input id="submit" type="submit" value="Send">
+        </form>
+        
+       </section>
+       <div class="contact-cards">
+        <div class="contact-card">
+            ✉️Email<br><a href="mailto:pinwenmu@gmail.com">pinwenmu@gmail.com</a>
+        </div>
+        <div class="contact-card">
+            💼LinkedIn<br><a href="http://www.linkedin.com/in/pinwen-mu-799b8328a" target="_blank" rel="noopener noreferrer">Pinwen(Lillian) Mu</a>
+        </div>
+        <div class="contact-card">
+            ☎️Phone<br><a href="tel:+(022)307-0668">(022) 307-0668</a>
+        </div>
+    </div></main>
+    <footer>
+        <p>© 2023 Pinwen Mu</p>
+    </footer>   
+    <script src="./script/header.js"></script>
+    <script src="./script/contact.js"></script> 
+</body>
+</html>

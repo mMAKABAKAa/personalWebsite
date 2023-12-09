@@ -1,0 +1,83 @@
+{
+    "my_education":[
+    {
+        "education":{
+            "school":"Boston University",
+            "major":"Software Development",
+            "type":"MS",
+            "year_conferred":"Jan 2023 - Present",
+            "img":"./images/Boston_University.svg"
+        }
+    },
+    {
+        "education":{
+            "school":"Nanjing University of Finance and Economics",
+            "major":"Economics",
+            "type":"MS",
+            "year_conferred":"Sep 2016 - Jun 2019",
+            "img":"./images/Nanjing_University_of_Finance_and_Economics.jpg"
+        }
+    },{
+        "education":{
+            "school":"Nanjing University of Posts and Telecommunications",
+            "major":"Microelectronics",
+            "type":"BS",
+            "year_conferred":"Sep 2012 - Jun 2016",
+            "img":"./images/nanjing university of posts and telecommunications.jpeg"
+        }
+    }
+    ],
+    "my_certification":[
+        {
+            "certification":{
+                "img":"./images/rice-university.jpeg",
+                "program":"Introduction to Scripting in Python",
+                "url":"https://www.coursera.org/account/accomplishments/specialization/certificate/9P8MFK9GGWCS"
+            }
+        },
+        {
+            "certification":{
+                "img":"./images/university of illinois champaign.png",
+                "program":"Accelerated Computer Science Fundamentals",
+                "url":"https://www.coursera.org/account/accomplishments/specialization/certificate/CUAAW86ZJ89R"
+            }
+        },
+        {
+            "certification":{
+                "img":"./images/imperial-college-london.jpeg",
+                "program":"Mathematics for Machine Learning: Linear Algebra",
+                "url":"https://www.coursera.org/account/accomplishments/verify/4X336E38KCUJ"
+            }
+        }
+
+    ],
+    "my_project":[
+        {
+            "course":{
+            "img":"./images/pomodoro_logo1.png",
+            "name":"Database of Pomodoro-Workout Clock",
+            "description":"A database designed for the 'Pomodoro-Workout Clock'",
+            "tech":"PostgreSQL",
+            "link":"https://github.com/mMAKABAKAa/BU-cs669-Database-Design-and-Implementation-for-Business"
+            }
+        },
+        {
+            "course":{
+            "img":"./images/stimulation_logo.png",
+            "name":"SimuScheduler",
+            "description":"An implementation of a small simulation program simulates a process scheduler in a computer system.",
+            "tech":"Java",
+            "link":"https://github.com/mMAKABAKAa/BU-CS526-DATA-STRUCTURES-AND-ALGORITHMS"
+            }
+        },
+        {
+            "course":{
+            "img":"./images/pomodoro_logo2.png",
+            "name":"Pomodoro-Workout Clock",
+            "description":"Developed a program that combines the Pomodoro timer with exercise during breaks.",
+            "tech":"Python",
+            "link":"https://github.com/mMAKABAKAa/BU-CS521-INFORMATION-STRUCTURES-WITH-PYTHON"
+            }
+        }
+    ]
+}

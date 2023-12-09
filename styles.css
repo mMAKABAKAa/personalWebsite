@@ -1,48 +1,60 @@
 /* Basic Reset */
+/* This section resets the default margin and padding for all elements, ensuring consistency across different browsers. */
 *, *:before, *:after {
-    box-sizing: border-box;
+    box-sizing: border-box; 
     margin: 0;
     padding: 0;
 }
 
 /* Base Styles */
+/* These styles are applied to the html and body elements, setting the base font, color, and background for the entire page. */
 html, body {
-    font-family: Arial, sans-serif;
-    color: #191919;
-    background-color:#FEFAE0;
-    line-height: 1.6;
-    height: 100%;
+    font-family: Arial, sans-serif; /* Sets the default font */
+    color: #191919; /* Sets the default text color */
+    background-color:#FEFAE0; /* Sets the background color */
+    line-height: 1.6; /* Sets the line height */
+    height: 100%; /* Ensures these elements take up full height of the viewport */
 }
 
+/* Ensures the body takes up at least the full height of the viewport and uses flexbox for its children */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
+
+/* Ensures the main content takes up the flexible space in the flex container */
 main {
-    flex:1;
+    flex: 1;
 }
 
+/* Styles for the footer */
 footer {
     text-align: center;
     height: 3rem;
     padding: 1rem;
 }
+
 /* Typography */
+/* Sets the color for paragraph text */
 p {
     color: rgb(74, 74, 74);
 }
 
+/* Styles for h2 headings */
 h2 {
     text-align: center;
     margin-top: 1rem;
     width: 100%;
 }
-h3{
+
+/* Styles for h3 headings */
+h3 {
     padding: 1rem 0;
 }
 
 /* Header */
+/* Styles for the header, including layout and border */
 header {
     display: flex;
     justify-content: space-between;
@@ -52,24 +64,26 @@ header {
     background-color: #E9EDC9;
 }
 
-header h1 a{
+/* Styles for the h1 inside the header */
+header h1 a {
     color: rgb(106, 106, 106);
     font-size: 1.5rem;
     font-family: 'Nothing You Could Do', cursive;
     text-decoration: none;
 }
 
-
+/* Hover effect for links in the header */
 header a:hover {
     color: #0a0a0af0;
     font-style: oblique;
 }
 
-/* 默认隐藏更多选项 */
+/* Initially hides the 'more' options */
 .more {
     display: none;
 }
 
+/* Styles for the 'more-menu' */
 .more-menu {
     display: none;
     position: absolute;
@@ -80,17 +94,19 @@ header a:hover {
 }
 
 /* Navigation */
+/* Removes list styling and sets layout for the navigation menu */
 nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-
 }
 
+/* Spacing for list items in the navigation */
 nav li {
     margin-left: 3rem;
 }
 
+/* Styles for links in the navigation */
 nav a {
     color: rgb(131, 131, 131);
     text-decoration: none;
@@ -98,12 +114,14 @@ nav a {
     font-size: 1rem;
 }
 
+/* Hover effect for navigation links */
 nav a:hover {
     color: #0a0a0af0;
     font-style: oblique;
 }
 
-/* Index Page Style*/
+/* Index Page Style */
+/* Sets the layout for the index page */
 .index {
     display: flex;
     flex-direction: column;
@@ -112,37 +130,42 @@ nav a:hover {
     gap: 2rem;
     padding: 1rem;
     text-align: center;
-    
 }
 
+/* Styles for h2 on the index page */
 .index h2 {
     font-size: 2.5rem;
 }
 
+/* Keyframes for a waving animation */
 @keyframes wave-animation {
     0%, 100% { transform: rotate(0deg); }
     20%, 60% { transform: rotate(-20deg); }
     40%, 80% { transform: rotate(10deg); }
 }
 
+/* Applies the wave animation to elements with the 'wave' class */
 .wave {
     display: inline-block;
     animation-name: wave-animation;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    transform-origin: 70% 70%;  /* 调整这个值来改变旋转的原点 */
-}
-#typewriter {
-    border-right: 2px solid;
-    white-space: nowrap; /* 防止换行 */
-    overflow: hidden; /* 隐藏溢出的文字 */
-    /* 您可以添加其他样式，比如字体大小、颜色等 */
+    transform-origin: 70% 70%; /* Adjusts the rotation point of the animation */
 }
 
+/* Styles for the typewriter effect */
+#typewriter {
+    border-right: 2px solid;
+    white-space: nowrap; /* Prevents line breaks */
+    overflow: hidden; /* Hides overflowing text */
+}
+/* Index Page Styles */
+/* Styles for paragraphs on the index page */
 .index p {
     font-size: 1.5rem;
 }
 
+/* Styles for images on the index page */
 .index img {
     width: 10rem;
     height: 10rem;
@@ -151,8 +174,8 @@ nav a:hover {
     object-fit: cover;
 }
 
-
 /* About Page Styles */
+/* Sets the layout for the about page */
 .about {
     display: flex;
     flex-direction: column;
@@ -160,6 +183,7 @@ nav a:hover {
     padding: 1rem;
 }
 
+/* Wrapper for content on the about page */
 .about .content-wrapper {
     display: flex;
     width: 80%;
@@ -167,12 +191,14 @@ nav a:hover {
     align-items: center;
 }
 
+/* Styles for text content on the about page */
 .about .text-content {
     width: 50%;
     text-align: left;
     margin: 5% 2.5%;
 }
 
+/* Styles for images on the about page */
 .about img {
     width: 50%;
     height: auto;
@@ -182,34 +208,40 @@ nav a:hover {
 }
 
 /* Project Page Styles */
-.project-container{
+/* Layout for the project container */
+.project-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
     padding-top: 1.5rem;
 }
+
+/* Styles for project images */
 .project-img {
-    width: 400px; /* 或其他尺寸 */
+    width: 400px; 
     border: 1px solid #ddd; 
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
     transition: transform 0.3s ease;
 }
 
+/* Hover effect for project images */
 .project-img:hover {
-    transform: scale(1.05); /* 放大效果 */
-    
+    transform: scale(1.05); /* Enlarges the image */
 }
 
+/* Initially hides project info */
 .project-info {
     display: none;
     position: absolute;
-    /* 其他样式设置 */
 }
 
+/* Shows project info when active */
 .project-info.active {
     display: block;
 }
+
+/* Styles for the modal */
 .modal {
     display: none;
     position: fixed;
@@ -221,6 +253,7 @@ nav a:hover {
     z-index: 2;
 }
 
+/* Styles for the modal content */
 .modal-content {
     background-color: #fafcdb;
     margin: 10% auto;
@@ -228,15 +261,15 @@ nav a:hover {
     border: 1px solid #888;
     width: 80%;
     height: 50%;
-    ;
-    /* 其他样式 */
 }
 
-#project_name{
+/* Styles for the project name in the modal */
+#project_name {
     font-size: x-large;
     font-weight: bold;
 }
 
+/* Styles for the close button in the modal */
 .close {
     color: #aaa;
     float: right;
@@ -244,6 +277,7 @@ nav a:hover {
     font-weight: bold;
 }
 
+/* Hover effect for the close button */
 .close:hover,
 .close:focus {
     color: black;
@@ -251,8 +285,8 @@ nav a:hover {
     cursor: pointer;
 }
 
-
-/* Interest Page Styles (Carousel)*/
+/* Interest Page Styles (Carousel) */
+/* Styles for navigation buttons in the carousel */
 .interest-nav button {
     padding: 0.5rem 1rem;
     margin-right: 0.5rem;
@@ -261,6 +295,7 @@ nav a:hover {
     cursor: pointer;
 }
 
+/* Layout for the navigation in the carousel */
 .interest-nav {
     display: flex;
     justify-content: center;
@@ -269,61 +304,62 @@ nav a:hover {
     margin: 2rem 0;
 }
 
+/* Styles for the content container in the carousel */
 .content-container {
-    text-align: center; /* 文本居中 */
+    text-align: center; /* Centers the text */
     position: relative;
 }
-#hongkong, #uk, #guilin{
-    width: 40%;
-}
+
+/* Styles for images in the content container */
 .content-container img {
-    
     display: none;
-    margin: 1rem auto; /* 图片居中 */
+    margin: 1rem auto; /* Centers the image */
     width: 25%;
 }
 
+/* Initially shows the first image in the content container */
 .content-container img:first-child {
     display: block;
 }
 
-/* 调整左右箭头按钮的位置 */
-/* 针对箭头按钮的基本样式 */
+/* Adjusts the position of the arrow buttons */
+/* Base styles for arrow buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-100%);
-    background-color: transparent; /* 无背景色 */
-    border: none; /* 无边框 */
-    font-size: 24px; /* 箭头大小 */
-    color: #333; /* 箭头颜色 */
+    background-color: transparent; /* No background color */
+    border: none; /* No border */
+    font-size: 50px; /* Size of the arrows */
+    color: #333; /* Color of the arrows */
 }
 
+/* Positions the previous button */
 .prev {
     left: 25%;
 }
 
+/* Positions the next button */
 .next {
     right: 25%;
 }
 
+/* Styles for iframe in the content container */
 .content-container iframe {
     margin: 0.5rem;
     border: none;
 }
 
-
-
-/* Initially show the first tab content */
-
 /* Contact Page Styles */
+/* Layout for the contact page */
 .contact {
     padding: 1rem;
     display: flex;
     flex-direction: column;
 }
 
+/* Layout for the contact form */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -331,27 +367,31 @@ nav a:hover {
     width: 100%;
 }
 
+/* Styles for input fields in the contact form */
 .contact #name, 
 .contact #email, 
 .contact #subject,
 .contact #message {
     width: 80%;
-    height:2rem;
-    margin:  0 0 1rem 0;
+    height: 2rem;
+    margin: 0 0 1rem 0;
     background-color: #FEFAE0;
     border: 2px solid #CCD5AE;
 }
 
+/* Styles for the message textarea in the contact form */
 .contact #message {
     height: 10rem;
 }
 
+/* Styles for error messages */
 .error {
     color: red;
     font-size: 12px;
 }
 
-.contact #submit{
+/* Styles for the submit button in the contact form */
+.contact #submit {
     padding: 0.5rem 1rem;
     margin-right: 0.5rem;
     border: 1px solid #CCD5AE;
@@ -359,6 +399,11 @@ nav a:hover {
     cursor: pointer;
 }
 
+.contact #submit:hover {
+    background-color: #CCD5AE;
+}
+
+/* Layout for contact cards */
 .contact-cards {
     display: flex;
     flex-direction: row;
@@ -367,24 +412,33 @@ nav a:hover {
     padding: 1rem;
 }
 
+/* Styles for individual contact cards */
 .contact-card {
-    background-color: #E9EDC9;;
+    background-color: #E9EDC9;
     border: 1px solid #CCD5AE;
     border-radius: 4px;
     padding: 1rem;
     width: 25%;
     text-align: center;
 }
-.contact p{
+
+/* Styles for paragraphs in the contact section */
+.contact p {
     text-align: center;
 }
-.contact a{
-    color:darkolivegreen;
+
+/* Styles for links in the contact section */
+.contact a {
+    color: darkolivegreen;
 }
-.contact a:hover{
+
+/* Hover effect for links in the contact section */
+.contact a:hover {
     color: greenyellow;
 }
+
 /* Resume Page Styles */
+/* Layout for the resume container */
 .resume-container {
     display: flex;
     flex-direction: column;
@@ -393,14 +447,8 @@ nav a:hover {
     text-align: center;
     margin: 20px;
 }
-/* .resume-container button{
-    padding: 0.5rem 1rem;
-    margin-right: 0.5rem;
-    border: 1px solid #CCD5AE;
-    background-color: #E9EDC9;
-    cursor: pointer;
-} */
 
+/* Styles for the download button link */
 .button-link {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -409,37 +457,42 @@ nav a:hover {
     color: rgb(74, 74, 74);
     text-align: center;
     text-decoration: none;
-    border-radius: 5px;
     font-size: 12px;
     cursor: pointer;
 }
+
+/* Hover effect for the download button link */
 .button-link:hover {
     background-color: #CCD5AE;
 }
 
-
-#resume{
+/* Styles for the resume iframe */
+#resume {
     width: 800px;
     padding: 2rem 0;
 }
 
 /* Education Page Styles */
+/* Styles for education cards */
 .education-card {    
     width: 400px; 
     border: 1px solid #ddd; 
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }
 
+/* Styles for images in education cards */
 .education-card img {
     width: 100%; 
     height: 200px; 
-    object-fit:fill;
+    object-fit: fill;
 }
 
+/* Styles for the information section in education cards */
 .education-card-info {
     padding: 15px;
 }
 
+/* Layout for certification and education card containers */
 .certification-card-container, .education-card-container {
     display: flex;
     flex-wrap: wrap;
@@ -447,6 +500,8 @@ nav a:hover {
     gap: 20px;
     padding-top: 1.5rem;
 }
+
+/* Styles for certification cards */
 .certification-card {
     position: relative;
     width: 400px;
@@ -455,12 +510,14 @@ nav a:hover {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Styles for images in certification cards */
 .certification-card img {
     width: 100%;
     height: 100%;
     object-fit: fill; 
 }
 
+/* Styles for the information overlay in certification cards */
 .certification-card-info {
     position: absolute;
     top: 0;
@@ -477,109 +534,107 @@ nav a:hover {
     transition: opacity 0.3s ease;
 }
 
+/* Hover effect for certification cards */
 .certification-card:hover .certification-card-info {
-    opacity: 1; 
+    opacity: 1; /* Make the certification card info fully visible when hovered */
 }
 
+/* Styling for headings and paragraphs inside certification card info */
 .certification-card-info h3, .certification-card-info p {
-    color: black; 
-    margin: 10px;
+    color: black; /* Text color set to black */
+    margin: 10px; /* Margin of 10 pixels on all sides */
 }
 
+/* Styling for link images */
 .link-image {
-    transition: transform 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for transform and filter properties */
 }
 
+/* Hover effect for link images */
 .link-image:hover {
-    filter: brightness(0.1);
-    transform: scale(2); 
+    filter: brightness(0.1); /* Dim the image to 10% brightness */
+    transform: scale(2); /* Scale the image to twice its size */
 }
-
 
 /* Responsive Styles */
-/* 响应式样式 */
 
-/* 平板电脑和较小屏幕 */
+/* Styles for tablets and smaller screens */
 @media only screen and (max-width: 992px) {
     header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start of the flex container */
     }
 
     header h1 {
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.25rem; /* Reduce font size for the heading */
+        margin-bottom: 0.5rem; /* Bottom margin for spacing */
     }
 
     nav ul {
-        width: 100%;
-        justify-content: flex-start;
-        padding-top: 0.5rem;
+        width: 100%; /* Full width for the navigation list */
+        justify-content: flex-start; /* Align navigation items to the start */
+        padding-top: 0.5rem; /* Padding at the top for spacing */
     }
 
     nav li:not(:first-of-type) {
-        margin-left: 1rem;
+        margin-left: 1rem; /* Left margin for all list items except the first one */
     }
 
     nav li#home {
-        margin-left: 0;
+        margin-left: 0; /* No left margin for the 'home' list item */
     }
 
     nav a {
-        font-size: 0.8rem;
-        padding: 0.25rem 0;
+        font-size: 0.8rem; /* Smaller font size for navigation links */
+        padding: 0.25rem 0; /* Padding for top and bottom */
     }
 
-/* 手机和更小屏幕 */
+/* Styles for mobile phones and smaller screens */
 @media only screen and (max-width: 576px) {
     header h1,
     nav a,
     .index img,
     footer p {
-        font-size: 0.8rem;
+        font-size: 0.8rem; /* Further reduce font size for smaller screens */
     }
 
-    /* 隐藏原有导航项 */
+    /* Hide original navigation items */
     #nav_resume, #education, #interests, #contact {
-        display: none;
+        display: none; /* Hide these elements */
     }
-    /* 在小屏幕上显示更多选项 */
+    /* Display more options on small screens */
     .more {
-        display: block;
+        display: block; /* Make the 'more' section visible */
     }
 
     .more-menu{
-        width: 10rem;
+        width: 10rem; /* Set width for the more menu */
     }
     .more-menu li {
-        display: block;
-        text-align: left;
+        display: block; /* List items displayed as block */
+        text-align: left; /* Text aligned to the left */
     }
 
     .prev, .next {
-        font-size: 36px; /* 调整箭头大小 */
-        top: 50%;   
+        font-size: 36px; /* Increase size of the prev and next arrows */
+        top: 50%; /* Position them at the middle vertically */
     }
     .prev{
-        left: 2%; /* 针对 .prev */
+        left: 2%; /* Position the 'prev' arrow slightly from the left */
     }
     .next{
-        right:2%; /* 针对 .next */
-    }
-
-    #landscape{
-        width: 80%;
+        right:2%; /* Position the 'next' arrow slightly from the right */
     }
 
     .interest-nav button {
-        padding: 0.5rem;
-        font-size: 0.8rem;
+        padding: 0.5rem; /* Padding for the buttons */
+        font-size: 0.8rem; /* Smaller font size for the buttons */
     }
 
     .video-responsive {
         position: relative;
         overflow: hidden;
-        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        padding-top: 56.25%; /* Aspect ratio of 16:9 for responsive video */
         height: 0;
         margin: 1rem;
     }
@@ -588,24 +643,24 @@ nav a:hover {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 100%; /* Full width for iframe */
+        height: 100%; /* Full height for iframe */
     }    
     .content-container iframe {
-        margin: 0;
+        margin: 0; /* No margin for iframe */
     }
     .content-container img,
     .content-container video {
-        width: 90%; /* 图片和视频的宽度 */
+        width: 90%; /* Width for images and videos */
     }
 
     #hongkong, #uk, #guilin{
-        width: 90%;
+        width: 90%; /* Width for specific images */
     }
 
     .modal-content {
-        width: 90%; /* 模态框的宽度 */
-        padding: 20px;
+        width: 90%; /* Width for modal content */
+        padding: 20px; /* Padding inside the modal */
     }
 
     .about .content-wrapper,
@@ -613,27 +668,28 @@ nav a:hover {
     .contact #email, 
     .contact #subject,
     .contact #message {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+        flex-direction: column; /* Stack items vertically in a column */
+        align-items: center; /* Center align the items */
+        width: 100%; /* Full width for these elements */
     }
 
     .about .text-content,
     .about img {
-        width: 80%;
+        width: 80%; /* Width for text content and images in the about section */
     }
     .contact-cards{
         display: flex;
-        flex-direction: column;
+        flex-direction: column; /* Stack contact cards vertically */
     }
     .contact-card {
-        width: 100%;
-        margin: 1rem;
+        width: 100%; /* Full width for contact cards */
+        margin: 1rem; /* Margin around each card */
     }
 
     #resume {
-        width: 90%;
-        padding: 2rem 0;
+        width: 90%; /* Width for the resume section */
+        padding: 2rem 0; /* Padding at the top and bottom */
     }
 }
 }
+

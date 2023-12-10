@@ -299,7 +299,7 @@ nav a:hover {
     background-color: #CCD5AE;
 }
 
-/* Layout for the navigation in the carousel */
+/* Layout for the navigation */
 .interest-nav {
     display: flex;
     justify-content: center;
@@ -336,10 +336,10 @@ nav a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-100%);
-    background-color: transparent; /* No background color */
-    border: none; /* No border */
-    font-size: 50px; /* Size of the arrows */
-    color: #333; /* Color of the arrows */
+    background-color: transparent; 
+    border: none; 
+    font-size: 50px; 
+    color: #333; 
 }
 
 /* Positions the previous button */
@@ -548,8 +548,8 @@ nav a:hover {
 
 /* Styling for headings and paragraphs inside certification card info */
 .certification-card-info h3, .certification-card-info p {
-    color: black; /* Text color set to black */
-    margin: 10px; /* Margin of 10 pixels on all sides */
+    color: black; 
+    margin: 10px; 
 }
 
 /* Styling for link images */
@@ -559,8 +559,8 @@ nav a:hover {
 
 /* Hover effect for link images */
 .link-image:hover {
-    filter: brightness(0.1); /* Dim the image to 10% brightness */
-    transform: scale(2); /* Scale the image to twice its size */
+    filter: brightness(0.1); 
+    transform: scale(2); 
 }
 
 /* Responsive Styles */
@@ -568,23 +568,23 @@ nav a:hover {
 /* Styles for tablets and smaller screens */
 @media only screen and (max-width: 992px) {
     header {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to the start of the flex container */
+        flex-direction: column;
+        align-items: flex-start; 
     }
 
     header h1 {
-        font-size: 1.25rem; /* Reduce font size for the heading */
-        margin-bottom: 0.5rem; /* Bottom margin for spacing */
+        font-size: 1.25rem; 
+        margin-bottom: 0.5rem; 
     }
 
     nav ul {
-        width: 100%; /* Full width for the navigation list */
-        justify-content: flex-start; /* Align navigation items to the start */
-        padding-top: 0.5rem; /* Padding at the top for spacing */
+        width: 100%; 
+        justify-content: flex-start; 
+        padding-top: 0.5rem;
     }
 
     nav li:not(:first-of-type) {
-        margin-left: 1rem; /* Left margin for all list items except the first one */
+        margin-left: 1rem; 
     }
 
     nav li#home {
@@ -592,8 +592,8 @@ nav a:hover {
     }
 
     nav a {
-        font-size: 0.8rem; /* Smaller font size for navigation links */
-        padding: 0.25rem 0; /* Padding for top and bottom */
+        font-size: 0.8rem;
+        padding: 0.25rem 0; 
     }
 
 /* Styles for mobile phones and smaller screens */
@@ -602,7 +602,7 @@ nav a:hover {
     nav a,
     .index img,
     footer p {
-        font-size: 0.8rem; /* Further reduce font size for smaller screens */
+        font-size: 0.8rem; 
     }
 
     /* Hide original navigation items */
@@ -615,27 +615,27 @@ nav a:hover {
     }
 
     .more-menu{
-        width: 10rem; /* Set width for the more menu */
+        width: 10rem; 
     }
     .more-menu li {
-        display: block; /* List items displayed as block */
-        text-align: left; /* Text aligned to the left */
+        display: block; 
+        text-align: left;
     }
 
     .prev, .next {
-        font-size: 36px; /* Increase size of the prev and next arrows */
-        top: 50%; /* Position them at the middle vertically */
+        font-size: 36px; 
+        top: 50%; 
     }
     .prev{
-        left: 2%; /* Position the 'prev' arrow slightly from the left */
+        left: 2%;
     }
     .next{
-        right:2%; /* Position the 'next' arrow slightly from the right */
+        right:2%; 
     }
 
     .interest-nav button {
-        padding: 0.5rem; /* Padding for the buttons */
-        font-size: 0.8rem; /* Smaller font size for the buttons */
+        padding: 0.5rem; 
+        font-size: 0.8rem; 
     }
 
     .video-responsive {
@@ -650,24 +650,24 @@ nav a:hover {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%; /* Full width for iframe */
-        height: 100%; /* Full height for iframe */
+        width: 100%; 
+        height: 100%; 
     }    
     .content-container iframe {
-        margin: 0; /* No margin for iframe */
+        margin: 0; 
     }
     .content-container img,
     .content-container video {
-        width: 90%; /* Width for images and videos */
+        width: 90%; 
     }
 
     #hongkong, #uk, #guilin{
-        width: 90%; /* Width for specific images */
+        width: 90%;
     }
 
     .modal-content {
-        width: 90%; /* Width for modal content */
-        padding: 20px; /* Padding inside the modal */
+        width: 90%; 
+        padding: 20px; 
     }
 
     .about .content-wrapper,
@@ -675,27 +675,27 @@ nav a:hover {
     .contact #email, 
     .contact #subject,
     .contact #message {
-        flex-direction: column; /* Stack items vertically in a column */
-        align-items: center; /* Center align the items */
-        width: 100%; /* Full width for these elements */
+        flex-direction: column; 
+        align-items: center; 
+        width: 100%;
     }
 
     .about .text-content,
     .about img {
-        width: 80%; /* Width for text content and images in the about section */
+        width: 80%; 
     }
     .contact-cards{
         display: flex;
-        flex-direction: column; /* Stack contact cards vertically */
+        flex-direction: column; 
     }
     .contact-card {
-        width: 100%; /* Full width for contact cards */
-        margin: 1rem; /* Margin around each card */
+        width: 100%; 
+        margin: 1rem; 
     }
 
     #resume {
-        width: 90%; /* Width for the resume section */
-        padding: 2rem 0; /* Padding at the top and bottom */
+        width: 90%; 
+        padding: 2rem 0; 
     }
 }
 }

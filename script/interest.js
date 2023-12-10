@@ -20,11 +20,8 @@ if (document.getElementById('gardening')) {
 
 // For each element with the class 'content-container'
 document.querySelectorAll('.content-container').forEach(container => {
-    // Initialize the current image index
     let currentImgIndex = 0;
-    // Get all image elements within the current container
     const images = container.querySelectorAll('img');
-    // Count the total number of images
     const totalImages = images.length;
 
     // If there are images, display the first one

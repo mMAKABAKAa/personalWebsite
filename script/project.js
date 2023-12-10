@@ -1,11 +1,9 @@
 // Function to generate HTML for displaying projects
 function generateProjectHTML(projects){
     let html = `<h2>Course Projects</h2>
-    <div class="project-container">`; // Starting HTML with a header and container div
+    <div class="project-container">`; 
 
-    // Loop through each project in the projects array
     projects.forEach(proj => {
-        // Append HTML for each project, including project details and a modal for more information
         html += `
         <div class="project-item">
             <h3>${proj.course.name}</h3> <!-- Display the course name -->
@@ -22,16 +20,16 @@ function generateProjectHTML(projects){
         </div>
         `;
     });
-    return html + '</div>'; // Return the complete HTML string for projects
+    return html + '</div>'; 
 }
 
 // Asynchronous function to fetch and display project data
 async function doAsync_project(){
     try{
-        const response = await fetch(api); // Fetch data from the API
-        const data = await response.json(); // Parse the response as JSON
-        const projectDiv = document.querySelector('.project-section'); // Select the project section div
-        projectDiv.innerHTML = generateProjectHTML(data.my_project); // Set the inner HTML of the project div
+        const response = await fetch(api); 
+        const data = await response.json();
+        const projectDiv = document.querySelector('.project-section');
+        projectDiv.innerHTML = generateProjectHTML(data.my_project); 
 
         // Add click event listeners to project images to open the modal
         document.querySelectorAll('.project-img').forEach(item => {
@@ -52,4 +50,4 @@ async function doAsync_project(){
 
 // URL of the API endpoint
 const api = "https://raw.githubusercontent.com/mMAKABAKAa/personalWebsite/master/data.json";
-doAsync_project(); // Call the function to execute the operations
+doAsync_project(); 

@@ -5,7 +5,7 @@
             "school":"Boston University",
             "major":"Software Development",
             "type":"MS",
-            "year_conferred":"Jan 2023 - Present",
+            "year_conferred":"Jan 2023 - Aug 2024",
             "img":"./images/Boston_University.svg"
         }
     },
@@ -54,30 +54,31 @@
     "my_project":[
         {
             "course":{
+            "img":"./images/pomodoro_logo2.png",
+            "name":"Serverless Note App",
+            "description":"Developed a serverless, responsive web application for note-taking, utilizing React.js for the frontend and AWS services for the backend.<br> Enabled user authentication, note creation, modification, and deletion with secure file attachments.Implemented a full-stack solution with secure, scalable APIs using AWS Lambda and API Gateway, ensuring data privacy and security with AWS Cognito. Utilized DynamoDB for efficient data storage and retrieval.Integrated Stripe for processing credit card payments and automated deployments through GitHub and Seed. Configured SSL with AWS Certificate Manager and custom domain hosting via Route 53, delivering the application over HTTPS for enhanced security.",
+            "tech":"TypeScript, React, Bootstrap, AWS Services (Lambda, API Gateway, DynamoDB, Cognito, S3, CloudFront), Stripe, GitHub",
+            "link":"https://github.com/mMAKABAKAa/Serverless-Notes-App"
+            }
+        },
+        {
+            "course":{
+            "img":"./images/stimulation_logo.png",
+            "name":"React Responsive Admin Dashboard    ",
+            "description":"Developed a responsive React dashboard for real-time visualization of retail sales and operational metrics. Integrated features for interactive analysis of sales trends, revenue, expenses, and customer behaviors over 24 hours. Provided insights into recent orders and patterns to support business decisions. Ensured an enhanced user experience across multiple devices.",
+            "tech":"HTML, CSS, JavaScript, React, Bootstrap",
+            "link":"https://github.com/mMAKABAKAa/Dashboard"
+            }
+        },
+        {
+            "course":{
             "img":"./images/pomodoro_logo1.png",
             "name":"Database of Pomodoro-Workout Clock",
             "description":"A database designed for the 'Pomodoro-Workout Clock'",
             "tech":"PostgreSQL",
             "link":"https://github.com/mMAKABAKAa/BU-cs669-Database-Design-and-Implementation-for-Business"
             }
-        },
-        {
-            "course":{
-            "img":"./images/stimulation_logo.png",
-            "name":"SimuScheduler",
-            "description":"An implementation of a small simulation program simulates a process scheduler in a computer system.",
-            "tech":"Java",
-            "link":"https://github.com/mMAKABAKAa/BU-CS526-DATA-STRUCTURES-AND-ALGORITHMS"
-            }
-        },
-        {
-            "course":{
-            "img":"./images/pomodoro_logo2.png",
-            "name":"Pomodoro-Workout Clock",
-            "description":"Developed a program that combines the Pomodoro timer with exercise during breaks.",
-            "tech":"Python",
-            "link":"https://github.com/mMAKABAKAa/BU-CS521-INFORMATION-STRUCTURES-WITH-PYTHON"
-            }
         }
+
     ]
 }
